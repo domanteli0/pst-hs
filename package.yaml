@@ -10,6 +10,12 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- base
+- webdriver
+- process
+- string-interpolate
+- text
+- numeric-prelude
 
 ghc-options:
 - -Wall
@@ -22,9 +28,13 @@ ghc-options:
 - -Wpartial-fields
 - -Wredundant-constraints
 
+# needed in order for haddock to generate docs for test deps
+library:
+  source-dirs: test
+
 tests:
   pst-hs-test:
-    main:                Spec.hs
+    main:                Main.hs
     source-dirs:         test
     ghc-options:
     - -threaded
@@ -33,3 +43,7 @@ tests:
     dependencies:
     - webdriver
     - process
+    - string-interpolate
+    - text
+    - numeric-prelude
+

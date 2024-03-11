@@ -1,3 +1,6 @@
 .stack-work/
 *~
 selenium-server-standalone-*.jar
+docs/
+dist-newstyle/
+test/Main
